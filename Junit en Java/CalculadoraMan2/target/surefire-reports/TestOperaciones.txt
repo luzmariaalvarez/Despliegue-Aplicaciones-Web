@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: TestOperaciones
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.298 sec <<< FAILURE!
+TestOperaciones.testSumar()  Time elapsed: 0.257 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: La suma de 5 + 3 debe ser 8 ==> expected: <16> but was: <8>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:542)
+	at TestOperaciones.testSumar(TestOperaciones.java:18)
+

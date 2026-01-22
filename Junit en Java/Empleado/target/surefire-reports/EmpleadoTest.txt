@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: EmpleadoTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.454 s <<< FAILURE! - in EmpleadoTest
+testErrorNombreIncorrecto  Time elapsed: 0.174 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: El nombre del empleado debería ser 'Juan' ==> expected: <Pedro> but was: <Juan>
+	at EmpleadoTest.testErrorNombreIncorrecto(EmpleadoTest.java:44)
+
