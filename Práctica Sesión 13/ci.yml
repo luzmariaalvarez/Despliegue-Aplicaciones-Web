@@ -1,0 +1,19 @@
+name: Pipeline CI - Build y Test
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Clonar repositorio
+      uses: actions/checkout@v3
+
+    - name: Instalar dependencias
+      run: npm install
+
+    - name: Ejecutar tests
+      run: npm test
