@@ -1,0 +1,125 @@
+/* ----- Reset suave + tipografía ----- */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #1f2937;                  /* gris oscuro */
+  background: #f8fafc;             /* fondo claro */
+}
+
+/* ----- Contenedor principal ----- */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+}
+
+/* ----- Cabecera / títulos ----- */
+h1, h2, h3 {
+  color: #0f172a;                  /* más oscuro para títulos */
+  line-height: 1.2;
+  margin: 0 0 16px;
+}
+h1 { font-size: clamp(26px, 3vw, 34px); }
+h2 { font-size: clamp(20px, 2.4vw, 26px); }
+
+/* ----- Texto y enlaces ----- */
+p { margin: 0 0 14px; }
+a {
+  color: #2563eb;                  /* azul */
+  text-decoration: none;
+  border-bottom: 1px dashed transparent;
+  transition: color .15s ease, border-color .15s ease;
+}
+a:hover { color: #1d4ed8; border-color: #93c5fd; }
+
+/* ----- Botones (útiles para enlaces de navegación) ----- */
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform .06s ease, box-shadow .15s ease, background .15s ease;
+  box-shadow: 0 6px 14px rgba(37,99,235,.25);
+}
+.btn:hover { background: #1d4ed8; transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+
+/* ----- Imágenes responsivas ----- */
+img { max-width: 100%; height: auto; border-radius: 12px; }
+
+/* ----- Tarjetas (por si haces secciones) ----- */
+.card {
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fdfefe;
+}
+
+/* ----- Formularios (por si usas contacto) ----- */
+label { font-weight: 600; display: block; margin: 10px 0 6px; }
+input[type="text"], textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #ffffff;
+  outline: none;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+input[type="text"]:focus, textarea:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96,165,250,.25);
+}
+button, input[type="submit"] {
+  margin-top: 10px;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 10px;
+  background: #16a34a;            /* verde */
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .15s ease, transform .06s ease;
+}
+button:hover, input[type="submit"]:hover { background: #15803d; transform: translateY(-1px); }
+
+/* ----- Mensajitos tipo alerta ----- */
+.alert {
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #1e40af;
+}
+
+/* ----- Footer pequeñito ----- */
+footer {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* ----- Modo oscuro automático si el usuario lo prefiere ----- */
+@media (prefers-color-scheme: dark) {
+  body { background: #0b1220; color: #e5e7eb; }
+  .container { background: #0f172a; border-color: #1f2a44; box-shadow: 0 10px 24px rgba(0,0,0,.45); }
+  h1, h2, h3 { color: #f8fafc; }
+  a { color: #93c5fd; }
+  .btn { background: #3b82f6; box-shadow: 0 6px 14px rgba(59,130,246,.25); }
+  .btn:hover { background: #2563eb; }
+  .card { background: #0b1220; border-color: #1f2a44; }
+  input[type="text"], textarea { background: #0b1220; color: #e5e7eb; border-color: #2b395a; }
+  input[type="text"]:focus, textarea:focus { border-color: #60a5fa; box-shadow: 0 0 0 3px rgba(96,165,250,.25); }
+  button, input[type="submit"] { background: #22c55e; }
+  button:hover, input[type="submit"]:hover { background: #16a34a; }
+  .alert { background: #0b2a4d; border-color: #1f4b86; color: #c7d2fe; }
+}
